@@ -1,0 +1,11 @@
+.change_pics {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.kuromiPics {
+  width: 50%;
+  height: 400px;
+}
