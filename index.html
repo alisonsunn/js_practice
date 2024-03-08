@@ -6,54 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="./style.css">
+  <script defer src="./js/checkbox.js"></script>
+  <script defer src="./js/images.js"></script>
 </head>
-<script>
-  (function () {
-    let count = 0;
-
-    window.onload = function () {
-
-      // get the buttons
-      const previousButton = document.querySelector(".previousButton");
-      const nextButton = document.querySelector(".nextButton");
-
-      // get the pics
-      let pic = document.querySelector(".kuromiPics");
-      const pics = [
-        "./image/kuromi1.webp",
-        "./image/kuromi2.webp",
-        "./image/kuromi3.jpeg"];
-
-      //change the pics
-      previousButton.addEventListener("click", previousPic);
-      nextButton.addEventListener("click", nextPic);
-
-      function previousPic() {
-        count--;
-        if (count < 0) {
-          count = pics.length - 1;
-        }
-        pic.src = pics[count];
-        notice.innerText = `Picture ${count + 1}.`;
-      }
-
-      function nextPic() {
-        count++;
-        console.log(count);
-        if (count >= pics.length) {
-          count = 0;
-        }
-        console.log(count);
-        pic.src = pics[count];
-        notice.innerText = `Picture ${count + 1}.`;
-      }
-
-      // change the notice
-      const notice = document.querySelector(".notice");
-    }
-  })();
-
-</script>
 
 <body>
   <section class="change_pics">
@@ -64,7 +19,24 @@
       <button class="nextButton">next</button>
     </div>
   </section>
-  
+  <section class="check_box">
+    <div>
+      <span>Choose your hobby:</span>
+      <input id="all" type="checkbox">All
+    </div>
+    <div>
+      <input type="checkbox" id="scales" name="hobby" value="Singing" />Singing
+      <input type="checkbox" id="scales" name="hobby" value="Dancing"/>Dancing
+      <input type="checkbox" id="scales" name="hobby" value="Coding"/>Coding
+      <input type="checkbox" id="scales" name="hobby" value="Running"/>Running
+    </div>
+    <div>
+      <button class="selectAll">Select all</button>
+      <button class="cancel">Cancel</button>
+      <button class="inverse">Inverse option</button>
+      <button class="sumbit">Submit</button>
+    </div>
+  </section>
 </body>
 
 </html>

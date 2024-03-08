@@ -1,11 +1,14 @@
-.change_pics {
+.change_pics,
+.check_box {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .kuromiPics {
   width: 50%;
   height: 400px;
 }
+
