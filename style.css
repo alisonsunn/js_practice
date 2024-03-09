@@ -1,5 +1,6 @@
 .change_pics,
-.check_box {
+.check_box,
+.tableOptions {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,3 +13,20 @@
   height: 400px;
 }
 
+/* append button */
+#appendButton {
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 5px;
+}
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(140 140 140);
+  margin-bottom: 5px;
+}
+
+th,
+td {
+  border: 1px solid rgb(160 160 160);
+  padding: 8px 10px;
+}

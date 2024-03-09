@@ -1,4 +1,3 @@
-// Select all
 const selectAll = document.querySelector(".selectAll");
 const options = document.getElementsByName("hobby");
 

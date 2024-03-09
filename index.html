@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./style.css">
   <script defer src="./js/checkbox.js"></script>
   <script defer src="./js/images.js"></script>
+  <script defer src="./js/table.js"></script>
 </head>
 
 <body>
@@ -26,15 +27,56 @@
     </div>
     <div>
       <input type="checkbox" id="scales" name="hobby" value="Singing" />Singing
-      <input type="checkbox" id="scales" name="hobby" value="Dancing"/>Dancing
-      <input type="checkbox" id="scales" name="hobby" value="Coding"/>Coding
-      <input type="checkbox" id="scales" name="hobby" value="Running"/>Running
+      <input type="checkbox" id="scales" name="hobby" value="Dancing" />Dancing
+      <input type="checkbox" id="scales" name="hobby" value="Coding" />Coding
+      <input type="checkbox" id="scales" name="hobby" value="Running" />Running
     </div>
     <div>
       <button class="selectAll">Select all</button>
       <button class="cancel">Cancel</button>
       <button class="inverse">Inverse option</button>
       <button class="sumbit">Submit</button>
+    </div>
+  </section>
+  <section class="tableOptions">
+    <table>
+      <caption>
+        Employee Salary Table
+      </caption>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Salary</th>
+          <th>Option</th>
+        </tr>
+      </thead>
+      <tbody class="tbody">
+        <tr>
+          <th>Alison</th>
+          <td>abc@gmail.com</td>
+          <td>10000</td>
+          <td class="delete"><a href="#">delete</a></td>
+        </tr>
+        <tr >
+          <th>Jacey</th>
+          <td>def@gmail.com</td>
+          <td>8000</td>
+          <td class="delete"><a href="#">delete</a></td>
+        </tr>
+        <tr>
+          <th>Lonnie</th>
+          <td>ghi@gmail.com</td>
+          <td>5000</td>
+          <td class="delete"><a href="#">delete</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <label>Name:</label><input id="name" type="text">
+    <label>Email:</label><input id="email" type="email">
+    <label>Salary:</label><input id="salary" type="number">
+    <div id="appendButton">
+      <span>Append</span>
     </div>
   </section>
 </body>
