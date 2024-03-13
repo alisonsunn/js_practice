@@ -1,14 +1,23 @@
 // delete column
 const tbody = document.querySelector(".tbody");
 const deleteOption = document.getElementsByTagName("tr");
+const deleteaTag = document.getElementsByTagName("a");
 console.log(deleteOption);
+console.log(deleteaTag);
 
-for (let i = 0; i < deleteOption.length; i++) {
-  deleteOption[i].lastElementChild.addEventListener("click", deleteElement);
-}
+// for (let i = 0; i < deleteOption.length; i++) {
+//   deleteOption[i].lastElementChild.addEventListener("click", deleteElement);
+// }
 
-function deleteElement() {
-  if (window.confirm("Do you really want to delete?")) this.parentNode.remove();
+document.addEventListener("click", deleteElement);
+
+// 这种方式是检查点击的元素的父节点的父节点是否为tr元素
+function deleteElement(e) {
+  let tr = e.target.parentNode.parentNode;
+  if ([...deleteOption].includes(tr)) {
+    console.log("true");
+    if (window.confirm("Do you really want to delete?")) tr.remove();
+  } 
 }
 
 // append column
