@@ -15,7 +15,7 @@ document.addEventListener("click", deleteElement);
 function deleteElement(e) {
   let tr = e.target.parentNode.parentNode;
   if ([...deleteOption].includes(tr)) {
-    console.log("true");
+    e.stopPropagation();
     if (window.confirm("Do you really want to delete?")) tr.remove();
   } 
 }
